@@ -19,6 +19,8 @@ const testimonials = [
   ["מהר מאוד הרגשנו שהעמוד נראה חי, מדויק ונכון יותר למותג שלנו.", "לקוח/ה • בעל/ת עסק"],
 ];
 
+const whatsappUrl = "https://web.whatsapp.com/";
+
 export default function Home() {
   return (
     <main>
@@ -34,11 +36,11 @@ export default function Home() {
 
       <section className="hero dark" id="top">
         <p className="script">Social by Noa</p>
-        <h1>אם כבר לגלול —<br />שיעצרו אצלכם.</h1>
+        <h1>אם כבר לגלול<br />שיעצרו אצלכם.</h1>
         <p className="hero-copy">אני לוקחת את כל מה שטוב בעסק שלכם והופכת אותו לתוכן שאנשים עוצרים בשבילו.</p>
         <div className="hero-actions">
           <a className="btn light" href="#contact">קבעו שיחת היכרות</a>
-          <a className="text-link" href="https://wa.me/?text=%D7%94%D7%99%D7%99%20%D7%A0%D7%95%D7%A2%D7%94%2C%20%D7%94%D7%92%D7%A2%D7%AA%D7%99%20%D7%93%D7%A8%D7%9A%20%D7%94%D7%90%D7%AA%D7%A8%20%D7%95%D7%90%D7%A9%D7%9E%D7%97%20%D7%9C%D7%A9%D7%9E%D7%95%D7%A2%20%D7%A2%D7%9C%20%D7%A0%D7%99%D7%94%D7%95%D7%9C%20%D7%94%D7%A1%D7%95%D7%A9%D7%99%D7%90%D7%9C%20%D7%9C%D7%A2%D7%A1%D7%A7%20%D7%A9%D7%9C%D7%99.">שלחו לי הודעה בוואטסאפ</a>
+          <a className="btn outline-light" href={whatsappUrl} target="_blank" rel="noreferrer">שלחו לי הודעה בוואטסאפ</a>
         </div>
         <div className="marquee" aria-label="portfolio preview">
           <div className="marquee-track">
@@ -72,7 +74,7 @@ export default function Home() {
       <section className="services" id="services">
         <div className="section-heading"><span>שתי חבילות.</span><em>אותה רמה של דיוק.</em></div>
         <div className="service-grid">
-          {services.map((service) => <article className="service-card" key={service.title}><span className="service-index">Social by Noa</span><h3>{service.title}</h3><p>{service.text}</p><ul>{service.items.map((item)=><li key={item}>{item}</li>)}</ul><a className="btn dark-btn" href="#contact">לקבלת הצעת מחיר</a></article>)}
+          {services.map((service) => <article className="service-card" key={service.title}><span className="service-index">Social by Noa</span><h3>{service.title}</h3><p>{service.text}</p><ul>{service.items.map((item)=><li key={item}>{item}</li>)}</ul><a className="btn dark-btn" href={whatsappUrl} target="_blank" rel="noreferrer">לקבלת הצעת מחיר</a></article>)}
         </div>
       </section>
 
@@ -84,8 +86,8 @@ export default function Home() {
       </section>
 
       <section className="clients cream">
-        <p className="section-label center">עסקים שעבדתי איתם</p>
-        <div className="logos"><div>FREEZER</div><div>נוני</div><div>PIZZA NINJA</div></div>
+        <p className="section-label center">עסקים שאני עובדת איתם</p>
+        <div className="logos"><div>FREEZER</div><div>החומוס של נוני</div><div>PIZZA NINJA</div></div>
       </section>
 
       <section className="testimonials">
@@ -98,11 +100,11 @@ export default function Home() {
         <h2>העסק שלכם כבר עובד קשה.<br/>הגיע הזמן שגם הסושיאל יעשה את שלו.</h2>
         <div className="contact-grid">
           <form><input placeholder="שם"/><input placeholder="טלפון / אימייל"/><input placeholder="שם העסק"/><textarea placeholder="ספרו לי קצת על העסק" rows={4}/><button className="btn light" type="submit">קבעו שיחת היכרות</button></form>
-          <div className="contact-copy"><p>רוצים להבין איזו מעטפת מתאימה לכם? השאירו פרטים ונמשיך משם.</p><a className="text-link" href="mailto:hello@socialbynoa.co.il">hello@socialbynoa.co.il</a><a className="text-link" href="https://wa.me/?text=%D7%94%D7%99%D7%99%20%D7%A0%D7%95%D7%A2%D7%94%2C%20%D7%94%D7%92%D7%A2%D7%AA%D7%99%20%D7%93%D7%A8%D7%9A%20%D7%94%D7%90%D7%AA%D7%A8%20%D7%95%D7%90%D7%A9%D7%9E%D7%97%20%D7%9C%D7%A9%D7%9E%D7%95%D7%A2%20%D7%A2%D7%9C%20%D7%A0%D7%99%D7%94%D7%95%D7%9C%20%D7%94%D7%A1%D7%95%D7%A9%D7%99%D7%90%D7%9C%20%D7%9C%D7%A2%D7%A1%D7%A7%20%D7%A9%D7%9C%D7%99.">WhatsApp</a></div>
+          <div className="contact-copy"><p>רוצים להבין איזו מעטפת מתאימה לכם? השאירו פרטים ונמשיך משם.</p><a className="text-link" href="mailto:hello@socialbynoa.co.il">hello@socialbynoa.co.il</a><a className="text-link" href={whatsappUrl} target="_blank" rel="noreferrer">WhatsApp</a></div>
         </div>
       </section>
 
-      <a className="whatsapp" href="https://wa.me/?text=%D7%94%D7%99%D7%99%20%D7%A0%D7%95%D7%A2%D7%94%2C%20%D7%94%D7%92%D7%A2%D7%AA%D7%99%20%D7%93%D7%A8%D7%9A%20%D7%94%D7%90%D7%AA%D7%A8%20%D7%95%D7%90%D7%A9%D7%9E%D7%97%20%D7%9C%D7%A9%D7%9E%D7%95%D7%A2%20%D7%A2%D7%9C%20%D7%A0%D7%99%D7%94%D7%95%D7%9C%20%D7%94%D7%A1%D7%95%D7%A9%D7%99%D7%90%D7%9C%20%D7%9C%D7%A2%D7%A1%D7%A7%20%D7%A9%D7%9C%D7%99." aria-label="WhatsApp">WA</a>
+      <a className="whatsapp" href={whatsappUrl} target="_blank" rel="noreferrer" aria-label="WhatsApp">WA</a>
     </main>
   );
 }
