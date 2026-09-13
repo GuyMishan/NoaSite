@@ -61,7 +61,9 @@ export default function Home() {
           <p>מבחינתי, סושיאל טוב מתחיל בהיכרות אמיתית עם העסק, ביחס אישי ובתוכן שמרגיש בדיוק כמוהו — לא עוד תבנית גנרית, אלא נוכחות שנראית ומרגישה שלכם.</p>
           <div className="stats"><div><b>100%</b><span>יחס אישי</span></div><div><b>360°</b><span>מעטפת תוכן</span></div><div><b>01</b><span>כתובת אחת לסושיאל</span></div></div>
         </div>
-        <div className="portrait-placeholder"><span>NOA</span><small>portrait</small></div>
+        <div className="portrait-wrap">
+          <img src="/noa-portrait.webp" alt="נועה - Social by Noa" className="portrait-image" />
+        </div>
       </section>
 
       <section className="portfolio cream" id="work">
